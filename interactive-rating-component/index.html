@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="main-container-before">
+        <div class="image-container">
+          <img src="./images/icon-star.svg" class="star" />
+        </div>
+        <div>
+          <h2 class="question">How did we do?</h2>
+          <p class="description">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
+        <div class="rating">
+          <div class="rating-values">1</div>
+          <div class="rating-values">2</div>
+          <div class="rating-values">3</div>
+          <div class="rating-values">4</div>
+          <div class="rating-values active">5</div>
+        </div>
+        <button type="submit" class="btn btn-submit">SUBMIT</button>
+      </div>
+      <div class="main-container-after hide">
+        <div class="thankyou-image-container">
+          <img
+            src="./images/illustration-thank-you.svg"
+            class="thankyou-image"
+          />
+        </div>
+        <div class="seleted-rating"></div>
+        <div class="thankyou-section">
+          <p class="thankyou-section__msg">Thank you!</p>
+          <p class="thankyou-section__detail">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let beforeSection = document.querySelector(".main-container-before");
+    let afterSection = document.querySelector(".main-container-after");
+    let selectedValue = document.getElementsByClassName(
+      "rating-values active"
+    )[0].innerText;
+    let selectedRating = document.querySelector(".seleted-rating");
+    document
+      .querySelector(".btn-submit")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        beforeSection.classList.add("hide");
+        afterSection.classList.remove("hide");
+        selectedRating.innerText = `You selected ${selectedValue} out of 5`;
+      });
+    document.querySelectorAll(".rating-values").forEach((element) => {
+      element.addEventListener("click", function (e) {
+        let selectedValueSection = document
+          .getElementsByClassName("rating-values active")[0]
+          .classList.remove("active");
+        selectedValue = e.target.innerText;
+        e.target.classList.add("active");
+      });
+    });
+  </script>
+</html>
