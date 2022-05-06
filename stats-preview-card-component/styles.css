@@ -134,6 +134,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-right: 0rem;
   }
   .stats .stats-elem {
     margin-bottom: 2rem;
