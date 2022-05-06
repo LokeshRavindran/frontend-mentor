@@ -91,6 +91,7 @@ body {
     flex-direction: column;
     height: auto;
     width: 325px;
+    margin: 2rem 0rem;
   }
   .card {
     padding: 3rem;
