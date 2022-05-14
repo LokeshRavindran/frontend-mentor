@@ -1,0 +1,260 @@
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  background-color: var(--White);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.desktop-bg {
+  display: inline;
+}
+.mobile-bg {
+  display: none;
+}
+
+.main-container {
+  height: 800px;
+  width: 1440px;
+  position: relative;
+}
+
+.main-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 7.25rem 10.25rem 6.25rem 10.3125rem;
+}
+.bg-image-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bg-image-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 21rem;
+}
+
+.row-1,
+.row-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.row-1 .r1-col1,
+.row-1 .r1-col2 {
+  width: 50%;
+}
+
+.r1-col1 {
+  padding-right: 10rem;
+}
+.r1-col1 h1 {
+  font-size: 3.3rem;
+  margin-bottom: 2rem;
+  color: var(--Very-Dark-Magenta);
+}
+.r1-col1 p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: var(--Dark-Grayish-Magenta);
+}
+
+.r1-col2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.star-sec {
+  width: 445px;
+  height: 55px;
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+  padding: 0rem 2rem;
+  margin-top: 1.15rem;
+}
+.star-sec:nth-child(1) {
+  margin-top: 1.7rem;
+}
+.star-div img {
+  margin-right: 0.5rem;
+}
+.star-div img:last-child {
+  margin-right: 2rem;
+}
+.star-sec:nth-child(2) {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.star-sec:nth-child(3) {
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+}
+.r2-col2 {
+  margin-top: 1rem;
+}
+.r2-col3 {
+  margin-top: 2rem;
+}
+
+.buyer-review {
+  height: 235px;
+  width: 350px;
+  background-color: var(--Very-Dark-Magenta);
+  border-radius: 7px;
+  padding: 2.5rem 2.5rem;
+  padding-left: 2rem;
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.buyer-details {
+  display: flex;
+  align-items: center;
+}
+
+.buyer-img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+.buyer-name {
+  line-height: 1.2rem;
+}
+.buyer-name h2 {
+  font-size: 1rem;
+  color: var(--White);
+}
+.buyer-name p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--Soft-Pink);
+}
+.buyer-review-text {
+  color: var(--Light-Grayish-Magenta);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop-bg {
+    display: none;
+  }
+  .mobile-bg {
+    display: inline;
+  }
+  body {
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+  }
+  .main-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .main-div {
+    max-width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 5rem 0rem;
+    text-align: center;
+  }
+  .row-1,
+  .row-2 {
+    flex-direction: column;
+  }
+  .row-2 {
+    margin-top: 3rem;
+  }
+  .row-1 .r1-col1,
+  .row-1 .r1-col2 {
+    width: 100%;
+  }
+  .r1-col1 {
+    padding-right: 0rem;
+  }
+  .r1-col1 h1 {
+    font-size: 2.5rem;
+    padding: 0rem 2rem;
+  }
+  .r1-col1 p {
+    font-size: 1.15rem;
+  }
+  .star-sec {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    font-weight: 700;
+    padding: 1rem 0rem;
+    margin-top: 1rem;
+  }
+  .star-div img {
+    margin: 0rem 0.5rem 1rem 0rem;
+  }
+  .star-div img:last-child {
+    margin-right: 0rem;
+  }
+  .star-sec p {
+    font-size: 1.1rem;
+  }
+  .star-sec:nth-child(1) {
+    margin-top: 3rem;
+  }
+  .buyer-review {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    padding-top: 2.5rem;
+  }
+  .buyer-review-text {
+    text-align: left;
+    font-size: 1.06rem;
+    margin-top: 1.5rem;
+  }
+  .r2-col3 {
+    margin-top: 1rem;
+  }
+  .bg-image-top-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .bg-image-bottom-mobile {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
