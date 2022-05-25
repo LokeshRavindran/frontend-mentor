@@ -1,0 +1,168 @@
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.no-error {
+  display: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  width: 100vw;
+  color: #fff;
+  background-color: var(--Red);
+  background-image: url("./images/bg-intro-mobile.png");
+}
+body .main-container {
+  width: 86.5%;
+  margin: auto;
+  padding: 6rem 0rem;
+  text-align: center;
+}
+body .main-container .left-container h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+body .main-container .left-container p {
+  margin-bottom: 4.125rem;
+  font-weight: 400;
+}
+body .main-container .right-container .plan-details {
+  background-color: var(--Blue);
+  border-radius: 10px;
+  padding: 1.15rem 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-size: 16px;
+  box-shadow: 0px 10px rgba(0, 0, 0, 0.1);
+}
+body .main-container .right-container .plan-details span {
+  font-weight: 600;
+}
+body .main-container .right-container .details-form {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0px 10px rgba(0, 0, 0, 0.1);
+}
+body .main-container .right-container .details-form .form-control {
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+body .main-container .right-container .details-form .form-control input {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--Grayish-Blue);
+}
+body .main-container .right-container .details-form .form-control input::placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+}
+body .main-container .right-container .details-form .form-control input.invalid-input {
+  color: red;
+  border: 2px solid var(--Red);
+}
+body .main-container .right-container .details-form .form-control img {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+body .main-container .right-container .details-form .form-control p {
+  text-align: right;
+  font-style: italic;
+  margin-top: 0.5rem;
+  padding: 0;
+  color: var(--Red);
+}
+body .main-container .right-container .details-form button {
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: var(--Green);
+  box-shadow: 0px 4px hsl(154deg, 54%, 40%);
+  outline: none;
+  border: none;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+body .main-container .right-container .details-form p {
+  color: var(--Grayish-Blue);
+  padding: 0rem 1rem;
+  font-size: 0.7rem;
+}
+body .main-container .right-container .details-form p a {
+  text-decoration: none;
+  color: var(--Red);
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    height: 100vh;
+    background-image: url("./images/bg-intro-desktop.png");
+  }
+  body .main-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 79%;
+    padding: 7.5rem 0rem;
+  }
+  body .main-container .left-container {
+    width: 50%;
+    padding-right: 4.5rem;
+    text-align: left;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body .main-container .left-container h1 {
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    line-height: 3.5rem;
+  }
+  body .main-container .right-container {
+    width: 50%;
+    max-width: 540px;
+    margin: auto;
+    height: 100%;
+  }
+  body .main-container .right-container .details-form {
+    padding: 2.5rem;
+  }
+  body .main-container .right-container .details-form .form-control {
+    margin-bottom: 20px;
+  }
+  body .main-container .right-container .details-form .form-control input {
+    padding: 20px 2rem;
+  }
+  body .main-container .right-container .details-form button {
+    margin-bottom: 1rem;
+  }
+  body .main-container .right-container .details-form button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
