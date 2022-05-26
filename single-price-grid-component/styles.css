@@ -1,0 +1,147 @@
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  background-color: var(--Light-Gray);
+  font-weight: 400;
+  min-height: 100vh;
+}
+body .main-container {
+  max-width: 82.9%;
+  margin: auto;
+  padding: 4.5rem 0rem;
+}
+body .main-container .top-section {
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 10px 10px 0px 0px;
+}
+body .main-container .top-section h1 {
+  color: var(--Cyan);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+body .main-container .top-section .info {
+  color: var(--Bright-Yellow);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+body .main-container .top-section .detail {
+  color: var(--Grayish-Blue);
+  font-size: 0.85rem;
+  line-height: 1.45rem;
+}
+body .main-container .bottom-section .fee-section {
+  padding: 1.5rem;
+  background-color: hsl(179deg, 62%, 46%);
+}
+body .main-container .bottom-section .fee-section h1 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1.15rem;
+}
+body .main-container .bottom-section .fee-section div p:nth-child(1) {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+body .main-container .bottom-section .fee-section div p:nth-child(1) span {
+  color: var(--Light-Gray);
+  font-size: 1rem;
+  position: absolute;
+  margin-left: 0.5rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+body .main-container .bottom-section .fee-section div p:nth-child(2) {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1.9rem;
+}
+body .main-container .bottom-section .fee-section button {
+  width: 100%;
+  padding: 1rem 1rem 14px 1rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: var(--Bright-Yellow);
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+body .main-container .bottom-section .why-us-section {
+  padding: 1.5rem;
+  background-color: hsl(179deg, 62%, 50%);
+}
+body .main-container .bottom-section .why-us-section p:nth-child(1) {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+body .main-container .bottom-section .why-us-section p:nth-child(2), body .main-container .bottom-section .why-us-section p:nth-child(3), body .main-container .bottom-section .why-us-section p:nth-child(4) {
+  color: var(--Light-Gray);
+  padding-right: 3.9rem;
+  line-height: 1.23;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .main-container {
+    padding: 0;
+    max-width: 635px;
+  }
+  body .main-container .top-section {
+    padding: 40px;
+  }
+  body .main-container .top-section h1 {
+    font-size: 1.5rem;
+  }
+  body .main-container .top-section .info {
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+  }
+  body .main-container .top-section .detail {
+    font-size: 0.95rem;
+    line-height: 1.45rem;
+  }
+  body .main-container .bottom-section {
+    display: flex;
+  }
+  body .main-container .bottom-section .fee-section {
+    width: 50%;
+    padding: 40px;
+  }
+  body .main-container .bottom-section .fee-section h1 {
+    font-size: 1rem;
+  }
+  body .main-container .bottom-section .why-us-section {
+    padding: 40px;
+    width: 50%;
+  }
+  body .main-container .bottom-section .why-us-section p:nth-child(1) {
+    font-size: 1rem;
+  }
+  body .main-container .bottom-section .why-us-section p:nth-child(2), body .main-container .bottom-section .why-us-section p:nth-child(3), body .main-container .bottom-section .why-us-section p:nth-child(4) {
+    color: var(--Light-Gray);
+    font-size: 0.9rem;
+    padding-right: 3.1rem;
+    line-height: 1.5;
+  }
+}
